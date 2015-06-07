@@ -152,17 +152,17 @@ public class EscPosPrinter {
     /**
      * Posibles values of  m: <br>
      * <ul>
-     * <li><strong>0,48</strong> No print</li>
-     * <li><strong>1,49</strong> Above bar code</li>
-     * <li><strong>2,50</strong> Below bar code</li>
-     * <li><strong>3,51</strong> Above and below bar code</li>
+     * <li><strong>0</strong> No print</li>
+     * <li><strong>1</strong> Above bar code</li>
+     * <li><strong>2</strong> Below bar code</li>
+     * <li><strong>3</strong> Above and below bar code</li>
      * </ul>
      * @param m The position.
      * @return byte[] to set HRI print position.
      * @throws IllegalArgumentException when m &lt; 0 || m &gt; 3.
      */
     public static byte[] setHriPrintPosition(Integer m) throws IllegalArgumentException{
-        if ((m < 0 || m > 3) && (m < 48 || m > 51)) {
+        if (m < 0 || m > 3) {
             throw new IllegalArgumentException("The acceptable values for \"m\" "
                     + " are from 0 to 3");
         }
@@ -178,8 +178,8 @@ public class EscPosPrinter {
     /**
      * Posibles values of  m: <br>
      * <ul>
-     * <li><strong>0,48</strong> Font 12 x 24</li>
-     * <li><strong>1,49</strong> Font 9 x17</li>
+     * <li><strong>0</strong> Font 12 x 24</li>
+     * <li><strong>1</strong> Font 9 x17</li>
      * </ul>
      * @param m The font.
      * @return byte[] to set HRI font.
