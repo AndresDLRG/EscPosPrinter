@@ -57,11 +57,6 @@ public class EscPosPrinter {
     }
 
     /**
-     * <ul>
-     *  <li><strong>0</strong> Hex. Dump.</li>
-     *  <li><strong>1</strong> Printer status</li>
-     *  <li><strong>2</strong> Rolling pattern</li>
-     * </ul>
      * @param m The type of diagnostic.
      * @return byte[] to print the diagnostic.
      * @throws IllegalArgumentException when m &lt; 1 || m &gt; 3.
